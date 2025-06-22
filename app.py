@@ -106,7 +106,7 @@ if os.path.exists(COUNT_CSV):
 # ---------------------- 维度切换逻辑 ----------------------
 def check_current_dim_complete():
     return all(
-        counts[st.session_state.current_dim] >= 5
+        counts[st.session_state.current_dim] >= 18
         for counts in st.session_state.comparison_counts.values()
     )
 
