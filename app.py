@@ -7,7 +7,7 @@ from trueskill import Rating, rate_1vs1
 from PIL import Image
 
 IMAGE_FOLDER = "images"
-PERCEPTIONS = ["美丽"]          # 你可以按需改成多维度
+PERCEPTIONS = ["安全"]          # 你可以按需改成多维度
 # PERCEPTIONS = ["美丽", "无聊", "压抑", "活力", "安全", "繁华"]
 RESULT_CSV_TEMPLATE = "comparison_results_{}.csv"
 COUNT_CSV = "image_comparison_counts.csv"
