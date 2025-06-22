@@ -128,10 +128,10 @@ def weighted_random_pair():
     valid_images = [
         img
         for img in ALL_IMAGES
-        if st.session_state.comparison_counts[img][st.session_state.current_dim] < 5
+        if st.session_state.comparison_counts[img][st.session_state.current_dim] < 18
     ]
     if not valid_images:
-        st.success("所有图片都已对比 5 次，感谢您的参与！")
+        st.success("所有图片都已对比 18 次，感谢您的参与！")
         st.stop()
 
     weights = [
