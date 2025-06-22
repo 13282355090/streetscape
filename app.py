@@ -7,7 +7,8 @@ from trueskill import Rating, rate_1vs1
 from PIL import Image
 
 IMAGE_FOLDER = "images"
-PERCEPTIONS = ["美丽", "无聊", "压抑", "活力", "安全", "繁华"]
+PERCEPTIONS = ["安全"]
+# PERCEPTIONS = ["美丽", "无聊", "压抑", "活力", "安全", "繁华"]
 RESULT_CSV_TEMPLATE = "comparison_results_{}.csv"
 COUNT_CSV = "image_comparison_counts.csv"
 
@@ -90,11 +91,11 @@ result_csv = RESULT_CSV_TEMPLATE.format(current_dim_name)
 # 权重策略（次数越多，权重越小），同时排除已比较 5 次以上的图片
 def weighted_random_pair():
     # 过滤掉已比较超过5次的图片
-    valid_images = [img for img in ALL_IMAGES if st.session_state.comparison_counts[img][st.session_state.current_dim] < 5]
+    valid_images = [img for img in ALL_IMAGES if st.session_state.comparison_counts[img][st.session_state.current_dim] < 18]
     
     # 如果所有图片都已对比5次或更多，结束对比
     if not valid_images:
-        st.success("所有图片都已对比 5 次，感谢您的参与！")
+        st.success("所有图片都已对比 18 次，感谢您的参与！")
         st.stop()
     
     weights = [1 / (1 + st.session_state.comparison_counts[img][st.session_state.current_dim]) for img in valid_images]
