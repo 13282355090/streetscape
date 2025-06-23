@@ -65,7 +65,7 @@ if admin_password == "2023202090005":
 
 # ---------------------- 用户 ID 输入 ----------------------
 if 'user_id' not in st.session_state:
-    user_id_input = st.text_input("请输入你的用户ID以开始（可以是任何字符，多次填写输入相同ID即可）：")
+    user_id_input = st.text_input("请输入您的姓名首字母（也可以是任何字符，多次填写输入相同ID即可）：")
     if user_id_input:
         st.session_state.user_id = user_id_input
         # ==== 新增开始 ====
