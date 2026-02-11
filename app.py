@@ -146,8 +146,8 @@ def weighted_random_pair():
 left_img, right_img = weighted_random_pair()
 
 # ---------------------- 显示图片与选择按钮 ----------------------
-st.title(f"您更喜欢哪张街景图『{current_dim_name}』？")
-st.subheader(f"您更喜欢哪张街景图: {current_dim_name}")
+st.title(f"您更喜欢哪张住宅图『{current_dim_name}』？")
+st.subheader(f"您更喜欢哪张住宅图: {current_dim_name}")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -166,7 +166,7 @@ with col2:
         f"{st.session_state.comparison_counts[right_img][st.session_state.current_dim]}"
     )
 
-st.markdown(f"### 您更喜欢哪张街景图『{current_dim_name}』？")
+st.markdown(f"### 您更喜欢哪张住宅图『{current_dim_name}』？")
 
 # ---------------------- 记录结果 / 更新状态 ----------------------
 def record_result(result):
@@ -231,6 +231,7 @@ with col2:
 with col3:
     if st.button("➡️ 选择右侧", use_container_width=True):
         record_result("right")
+
 
 
 
