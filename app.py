@@ -7,7 +7,7 @@ from trueskill import Rating, rate_1vs1
 from PIL import Image
 
 IMAGE_FOLDER = "images"
-PERCEPTIONS = ["安全"]          # 你可以按需改成多维度
+PERCEPTIONS = ["？"]          # 你可以按需改成多维度
 # PERCEPTIONS = ["美丽", "无聊", "压抑", "活力", "安全", "繁华"]
 RESULT_CSV_TEMPLATE = "comparison_results_{}.csv"
 COUNT_CSV = "image_comparison_counts.csv"
@@ -146,7 +146,7 @@ def weighted_random_pair():
 left_img, right_img = weighted_random_pair()
 
 # ---------------------- 显示图片与选择按钮 ----------------------
-st.title(f"您认为哪张图片更『{current_dim_name}』？")
+st.title(f"您更喜欢哪张街景『{current_dim_name}』？")
 st.subheader(f"当前对比维度: {current_dim_name}")
 
 col1, col2 = st.columns(2)
@@ -231,3 +231,4 @@ with col2:
 with col3:
     if st.button("➡️ 选择右侧", use_container_width=True):
         record_result("right")
+
