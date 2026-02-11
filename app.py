@@ -147,7 +147,7 @@ left_img, right_img = weighted_random_pair()
 
 # ---------------------- 显示图片与选择按钮 ----------------------
 st.title(f"您更喜欢哪张街景『{current_dim_name}』？")
-st.subheader(f"当前对比维度: {current_dim_name}")
+st.subheader(f"您更喜欢哪张街景: {current_dim_name}")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -231,5 +231,6 @@ with col2:
 with col3:
     if st.button("➡️ 选择右侧", use_container_width=True):
         record_result("right")
+
 
 
